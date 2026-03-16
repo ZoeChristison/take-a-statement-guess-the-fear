@@ -65,6 +65,8 @@ def main():
                 # If user won game, print success and break out of loop
                 if game_won == True:
                     print(f'{guess} is correct!')
+                    print('Here are all correct answers: ')
+                    give_answer(game_dict, episode_number)
                     break
                 
                 # If user was incorrect, print defeat
@@ -241,6 +243,9 @@ def give_answer(game_dict, episode_number):
     return: None
     '''
     # Find fears in dict and print them out one by one
-    print(game_dict[episode_number][FEARS])
+    fears = [game_dict[episode_number][FEARS]]
+    
+    for fear in fears:
+        print(fear)
 
 main()
