@@ -21,8 +21,6 @@ def main():
     content_warnings = input(f'MAG {episode_number}: {episode_title} content warnings: ')
     episode_blurb = input(f'MAG {episode_number}: {episode_title} episode blurb/key word.: ')
 
-    print("hello world")
-
     # Get info on fears associated with episode
     number_of_fears = int(input(f'How many fears are associated with MAG {episode_number}: {episode_title}? '))
     i = 0
