@@ -19,12 +19,9 @@ def main():
     # Get info that will be used as hints in game
     episode_info_blurb = input(f'MAG {episode_number}: {episode_title} info blurb: ')
     content_warnings = input(f'MAG {episode_number}: {episode_title} content warnings: ')
-    episode_blurb = input(f'MAG {episode_number}: {episode_title} episode blurb/key word: ')
+    episode_blurb = input(f'MAG {episode_number}: {episode_title} episode blurb/key word.: ')
 
-    # Make given info into lists so program won't crash
-    # episode_info_blurb = [episode_info]
-    # content_warnings = [content_warning]
-    # episode_blurb = [blurb_of_episode]
+    print("hello world")
 
     # Get info on fears associated with episode
     number_of_fears = int(input(f'How many fears are associated with MAG {episode_number}: {episode_title}? '))
