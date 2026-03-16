@@ -57,7 +57,7 @@ def main():
 
             if action == '1': # Make guess
                 # Get guess from user
-                guess = input(f'What is your guess? ')
+                guess = input(f'What is your guess? ').title()
 
                 # Give guess as an argument in function to determine if user won game
                 game_won = take_guess(game_dict, episode_number, guess)
@@ -78,7 +78,7 @@ def main():
             elif action == '2': # Get hint
                 # Give hint to user based on how many they've already had
                 hint = give_hints(game_dict, episode_number, number_of_hints)
-                print(f'Hint: {hint}')
+                print(hint)
 
                 # Add one to number of hints user has used
                 number_of_hints += 1
@@ -92,10 +92,13 @@ def main():
 
             # End if action == '3' -- Give up
 
+            else: # Invalid input entered
+                print('Invalid input given. Please enter a number from 1-3.')
+
         # Ask to play again
         play_again = input('Play again (y/n): ').lower()
 
-    print('Thank you for playing [enter cool game name here]. Have a good day!')
+    print('Thank you for playing Take a Statement, Guess the Fear! Have a good day!')
 
 # Function
 # Make CSV into dict
@@ -143,7 +146,7 @@ def begin_game(game_dict, episode_number):
     '''
     print(
     '''
-    Welcome to the [enter game name here]! You will be given random Magnus
+    Welcome to Take a Statement, Guess the Fear! You will be given random Magnus
     Archive episodes and you will try to guess one of the main fears assiciated
     with that episode. Each fear can be referred to by many names, so here are the
     names you should use while entering your guess:
@@ -208,17 +211,20 @@ def give_hints(game_dict, episode_number, hint_number):
     #### Add if statement-- if episode_number >= [number it starts having content warnings]
     #### else: [have all hints except for content warnings]
 
-    # if game_dict[episode_number][CONTENT_WARNINGS] == 'none':
+    # if game_dict[episode_number][CONTENT_WARNINGS] == 'none': (prob won't need because the transcripts have content warnings)
 
     # Give hint based on how many user has been given
     if hint_number == 1: # User's first hint
-        hint = game_dict[episode_number][EP_INFO]
+        statement_info_hint = game_dict[episode_number][EP_INFO]
+        hint = f'Statement Info: {statement_info_hint}'
 
     elif hint_number == 2: # User's second hint
-        hint = game_dict[episode_number][CONTENT_WARNINGS]
+        warnings_hint = game_dict[episode_number][CONTENT_WARNINGS]
+        hint = f'Content Warnings: {warnings_hint}'
 
     elif hint_number == 3: # User's third hint
-        hint = game_dict[episode_number][EP_BLURB]
+        ep_blurb_hint = game_dict[episode_number][EP_BLURB]
+        hint = f'Blurb from episode: {ep_blurb_hint}'
 
     else: # User has already gotten all hints
         hint = 'You have used all your hints!'
