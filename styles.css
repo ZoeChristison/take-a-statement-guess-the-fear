@@ -1,0 +1,132 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    place-items: center;
+    text-align: center;
+    background-image: url("images/tma-bg2.jpg");
+    background-size: 100%;
+}
+
+@font-face{
+    font-family: 'light-Typewriter';
+    src: url("../fonts/ELEGANT-TYPEWRITER-Light.ttf") format('truetype');
+}
+@font-face{
+    font-family: 'bold-Typewriter';
+    src: url("../fonts/ELEGANT-TYPEWRITER-Bold.ttf") format('truetype');
+}
+
+#content{
+    grid-column: 2;
+    margin: auto;
+    
+}
+
+button{
+    margin: 5px;
+    font-family: light-Typewriter;
+    background-color: #fff4e1;
+    border-radius: 8px;
+    border: none;
+    /* padding: 7px; */
+    min-width: 70px;
+    min-height: 25px;
+    text-align: center;
+    font-size: 17px;
+}
+
+#fears{
+    margin: 5px;
+    background-color: #fff4e1;
+    font-family: light-Typewriter;
+    border: none;
+    border-radius: 9px;
+    padding: 3px;
+    text-align: center;
+    font-size: 17px;
+}
+#fears option{
+    font-family: 'Courier New';
+    font-weight: bold;
+}
+
+
+select, button{
+    box-shadow: 0px 10px 40px -5px black;
+}
+
+h1,h3,h4{
+    color: #fff4e1;
+}
+
+/* h4, h5{
+    display: none;
+} */
+h1{
+    font-family: light-Typewriter;
+    font-size: 50px;
+    border-style: none none solid none;
+    border-width: 2px;
+    border-color: rgba(255, 244, 225, .25);
+    padding-bottom: 20px;
+}
+h3{
+    font-family: bold-Typewriter;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: -15px;
+}
+h4{
+    font-family: light-Typewriter;
+    font-size: 17px;
+}
+
+p{
+    font-family: light-Typewriter;
+}
+
+footer{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    /* padding-top: 15px; */
+    grid-column: 2;
+    color: #fff4e1;
+    font-family: light-Typewriter;
+    /* position: absolute;
+    bottom: 10px; */
+}
+
+footer p{
+    grid-row: 2;
+}
+
+#hint{
+    margin-bottom: 18px;
+}
+
+
+
+
+.accordion {
+  color: #fff4e1;
+  text-decoration:underline;
+  margin-top: 18px;
+  text-align: center;
+  font-family: light-Typewriter;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  color: #e8d4b3;
+  /* text-decoration: none; */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: rgba(255, 244, 225, .25);
+  color: #fff4e1;
+  display: none;
+  overflow: hidden;
+  border-radius: 20px;
+}

@@ -1,0 +1,80 @@
+<!-- Website by Anna Burke and Zoe Christison-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take a Statement, Guess the Fear</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="content">
+        <h1>Take a Statement<br>Guess The Fear</h1>
+
+        <h3>Mag 999 - Title</h3>
+
+        <h4 id="hint1">Statement of Joe Spooky, regarding sinister happenings.</h4>
+
+        <h4 id="hint2">Content Warnings: Spooky stuff, fear.</h4>
+
+        <form>
+            <select name="fears" id="fears">
+                <option value=" " >Select Fear</option>
+                <option value="The Buried" id="test">The Buried</option>
+                <option value="The Corruption">The Corruption</option>
+                <option value="The Dark">The Dark</option>
+                <option value="The Desolation">The Desolation</option>
+                <option value="The End">The End</option>
+                <option value="The Eye">The Eye</option>
+                <option value="The Flesh">The Flesh</option>
+                <option value="The Hunt">The Hunt</option>
+                <option value="The Lonely">The Lonely</option>
+                <option value="The Slaughter">The Slaughter</option>
+                <option value="The Spiral">The Spiral</option>
+                <option value="The Stranger">The Stranger</option>
+                <option value="The Vast">The Vast</option>
+                <option value="The Web">The Web</option>
+                <option value="The Extinction">The Extinction</option>
+            </select>
+         
+            <button id="submit">Submit</button>
+            <br>
+            <!-- WE CAN USE THE SAME CODE FOR THE ACCORDION AND THE HINTS -->
+            <button id="hint">Hint</button>
+            
+        </form>
+        <a class="accordion">Learn the rules... if you dare...</a>
+        <div class="panel">
+            <p>episode title randomly generated.</p>
+            <p>take hints if you need them i guess</p>
+            <p>guess which entity was behind each episode!!!1</p>
+            <p>enjoy.... if you dare...</p>
+        </div>
+
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        } 
+    </script>
+</body>
+<footer>
+
+    <p>A The Magnus Archives fan game by Anna Burke and Zoe Christison</p>
+</footer>
+
+</html>
