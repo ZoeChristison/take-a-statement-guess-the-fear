@@ -9,11 +9,11 @@ body{
 
 @font-face{
     font-family: 'light-Typewriter';
-    src: url("../fonts/ELEGANT-TYPEWRITER-Light.ttf") format('truetype');
+    src: url("fonts/ELEGANT-TYPEWRITER-Light.ttf") format('truetype');
 }
 @font-face{
     font-family: 'bold-Typewriter';
-    src: url("../fonts/ELEGANT-TYPEWRITER-Bold.ttf") format('truetype');
+    src: url("fonts/ELEGANT-TYPEWRITER-Bold.ttf") format('truetype');
 }
 
 #content{
