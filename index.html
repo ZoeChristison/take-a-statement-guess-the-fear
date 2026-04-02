@@ -7,17 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Take a Statement, Guess the Fear</title>
     <link rel="stylesheet" href="styles.css" />
+    <script>
+            button.addEventListener("click", displayhints(hintnumber));
+
+            function displaytitle(){
+            var title = "Mag 999 - Title";
+            document.getElementById("title").innerHTML = title;
+            }
+            function displayhint1(){
+            var hint1 = "Statement of Joe Spooky, regarding sinister happenings.";
+            document.getElementById("hint1").innerHTML = hint1;
+            }
+            function displayhint2(){
+            var hint2 = "Content Warnings: Spooky stuff, fear.";
+            document.getElementById("hint2").innerHTML = hint2;
+            }
+            
+        </script>
 </head>
 
-<body>
+<body onload="displaytitle(); displayhint1(); displayhint2()">
     <div id="content">
+        
         <h1>Take a Statement<br>Guess The Fear</h1>
 
-        <h3>Mag 999 - Title</h3>
 
-        <h4 id="hint1">Statement of Joe Spooky, regarding sinister happenings.</h4>
+        <div id="ep-info">
+        <h3><span id="title"></span></h3>
 
-        <h4 id="hint2">Content Warnings: Spooky stuff, fear.</h4>
+        <h4 id="hint1"><span id="hint1"></span></h4>
+
+        <h4 id="hint2"><span id="hint2"></span></h4>
+        </div>
 
         <form>
             <select name="fears" id="fears">
@@ -39,10 +60,11 @@
                 <option value="The Extinction">The Extinction</option>
             </select>
          
-            <button id="submit">Submit</button>
+            <button type=submit id="submit">Submit</button>
             <br>
             <!-- WE CAN USE THE SAME CODE FOR THE ACCORDION AND THE HINTS -->
-            <button id="hint">Hint</button>
+            <button type="button" id="hint">Hint</button>
+            <input type="button" id="actionButton" value="Hint">
             
         </form>
         <a class="accordion">Learn the rules... if you dare...</a>
